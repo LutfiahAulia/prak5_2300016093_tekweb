@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Schedule</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg fixed top-0 w-full z-50">
+      <div class="max-w-7 mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-10">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <img src="./src/image/Logo.png" alt="Remind Me Logo" class="h-10 w-auto" />
+          </div>
+          
+          <!-- Desktop Links -->
+          <div class="hidden md:flex space-x-4 flex-1 ml-20">
+            <a
+              href="#Home"
+              class="text-gray-600 hover:text-blue-600 px-4 py-3 rounded-md text-sm font-medium"
+              >Home</a
+            >
+            <a
+              href="#Features"
+              class="text-gray-600 hover:text-blue-600 px-4 py-3 rounded-md text-sm font-medium"
+              >Features</a
+            >
+            <a
+              href="#About Us"
+              class="text-gray-600 hover:text-blue-600 px-4 py-3 rounded-md text-sm font-medium"
+              >About us</a
+            >
+          </div>
+
+          <!-- Get App Button -->
+          <div class="hidden md:flex items-center h-10">
+            <a href="#AboutApp"
+            class="hidden md:block border border-blue-500 text-blue-500 px-4 py-1 rounded-full hover:bg-blue-100">
+                About App
+          </a>
+          </div>
+
+           <!-- Mobile Hamburger Icon -->
+           <div class="md:hidden flex items-center">
+            <button
+              id="hamburger-btn"
+              class="text-gray-600 hover:text-blue-600 focus:outline-none"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Section Utama -->
+    <div class="pt-20 flex items-center justify-center min-h-screen p-6 bg-gray-50">
+      <div class="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Bagian Kiri: Teks dan Tombol Download -->
+        <div class="flex flex-col md:w-10/12 mb-16 md:pr-12 justify-center space-y-4">
+          <h1 id="Home" class="text-3xl font-bold text-gray-900 leading-tight">
+            Manage Schedule and Task Easy
+          </h1>
+          <p class="text-gray-600">
+            Create and organize schedule and task deadline become better,
+            easymanage and certainly no longer lagging behind schedule of
+            activities and task.
+          </p>
+          <div class="justify-normal">
+            <button class="mt-4 bg-blue-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-blue-600 transition">
+              Download App
+            </button>
+          </div>
+        </div>
+
+        <!-- Bagian Kanan: Gambar HP -->
+        <div class="flex justify-end items-center -mt-10 -p-7" style="margin-right: -30px;">
+          <img
+            src="./src/image/Hero Image.png"
+            alt="Gambar Utama"
+            class="w-full md:w-3/4 lg:w-full xl:w-full rounded-lg shadow-md"
+            style="width: 120%;"
+          />
+        </div>
+      </div>
+    </div>
+
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-8 py-12 px-8 text-center">
+      <!-- Fitur 1 -->
+      <div>
+        <img
+          src="./src/image/uim_schedule.png"
+          alt="Icon 1"
+          class="w-12 h-12 mx-auto mb-4"
+        />
+        <h3 class="text-lg font-semibold">Set a better deadline tasks</h3>
+        <p class="text-gray-600">
+          You can make your duty deadlines better and more orderly.
+        </p>
+      </div>
+      <!-- Fitur 2 -->
+      <div>
+        <img
+          src="./src/image/uim_layer-group.png"
+          alt="Icon 2"
+          class="w-12 h-12 mx-auto mb-4"
+        />
+        <h3 class="text-lg font-semibold">Manage the tasks so easily</h3>
+        <p class="text-gray-600">
+          You can manage the deadlines and the schedule becomes easy.
+        </p>
+      </div>
+      <!-- Fitur 3 -->
+      <div>
+        <img
+          src="./src/image/ri_notification-fill.png"
+          alt="Icon 3"
+          class="w-12 h-12 mx-auto mb-4"
+        />
+        <h3 class="text-lg font-semibold">Wouldn't miss notifications</h3>
+        <p class="text-gray-600">
+          Of course you will always get the tasks and schedule notifications.
+        </p>
+      </div>
+    </section>
+
+    <!-- Bagian Set Up Task -->
+    <section
+      class="flex flex-col md:flex-row items-center justify-between py-12 px-8 md:px-20 bg-gray-50">
+      <!-- Bagian Kiri - Gambar Formulir Pembuatan Tugas -->
+      <div class="md:w-1/2 flex justify-center relative mb-8 md:mb-0">
+        <!-- Tambahkan gambar mockup -->
+        <img
+          src="./src/image/Image.png"
+          alt="Gambar Mockup Formulir Tugas"
+          class="w-full md:w-3/4 lg:w-4/5 shadow-lg rounded-lg"
+        />
+      </div>
+
+      <!-- Bagian Kanan - Teks Penjelasan -->
+      <div class="md:w-1/2 space-y-4 text-center md:text-left">
+        <h2 class="text-3xl font-bold">
+          Set up task and schedule with a best features
+        </h2>
+        <p class="text-gray-600">
+          The best feature makes you better, with the latest technology to meet
+          your needs. Of course, with such features as organizing schedules and
+          leading assignments, it will make you easier, So get the application
+          now!
+        </p>
+      </div>
+    </section>
+
+    <!-- Bagian Notifikasi Prioritas -->
+    <section
+      class="flex flex-col md:flex-row items-center justify-between py-12 px-8 md:px-20 bg-gray-50"
+    >
+      <!-- Bagian Kiri - Teks Penjelasan -->
+      <div class="md:w-1/2 space-y-4 text-center md:text-left mb-8 md:mb-0">
+        <h2 class="text-3xl font-bold">
+          Get the highest priority application notification
+        </h2>
+        <p class="text-gray-600">
+          The best feature makes you better, with the latest technology to meet
+          your needs. Of course, with sunch features as organizing schedules and
+          leading assignments, it will make you easier, So get the application
+          now!
+        </p>
+      </div>
+
+      <!-- Bagian Kanan - Gambar Notifikasi -->
+      <div class="md:w-1/2 flex justify-center relative">
+        <!-- Masukkan gambar mockup notifikasi -->
+        <img
+          src="./src/image/image 1.png"
+          alt="Gambar Mockup Notifikasi Aplikasi"
+          class="w-full md:w-3/4 lg:w-2/3 shadow-lg rounded-lg"
+        />
+      </div>
+    </section>
+
+    <!-- Bagian Unduh Aplikasi -->
+    <section
+      class="flex flex-col items-center justify-center py-12 px-6 bg-blue-500 rounded-lg mx-8 md:mx-20 shadow-lg text-center">
+      <h2 class="text-xl md:text-2xl font-semibold text-white mb-6">
+        Download an app now and the various benefits you will get immediately
+      </h2>
+
+      <div class="flex space-x-4">
+        <!-- Tombol Unduh Aplikasi -->
+        <button
+          class="px-6 py-2 bg-white text-blue-500 font-medium rounded-full shadow-md hover:bg-blue-100">
+          Download App
+        </button>
+        <!-- Tombol Tentang Aplikasi -->
+        <button
+          class="px-6 py-2 border border-white text-white font-medium rounded-full hover:bg-blue-600">
+          About App
+        </button>
+      </div>
+    </section>
+    <section
+      class="flex flex-col md:flex-row items-center justify-between py-12 px-8 md:px-20 bg-gray-50">
+      <!-- Bagian Kiri - Gambar Formulir Pembuatan Tugas -->
+      <div class="md:w-1/2 flex justify-center relative mb-8 md:mb-0">
+        <!-- Tambahkan gambar mockup -->
+        <img
+          src="./src/image/Testimonial.png"
+          alt="Gambar Mockup Formulir Tugas"
+          class="w-full md:w-3/4 lg:w-2/3 shadow-lg rounded-lg"
+        />
+      </div>
+
+      <!-- Bagian Kanan - Foto dan Teks Testimonial -->
+      <div class="text-center lg:text-left max-w-lg space-y-4">
+        <h2 class="text-3xl font-bold">What do they think</h2>
+
+        <!-- Foto Profil Kecil dan Nama -->
+        <div
+          class="flex items-center justify-center lg:justify-start space-x-4">
+          <div
+            class="w-12 h-12 rounded-full overflow-hidden border border-gray-300">
+            <img
+              src="./src/image/Profile.png"
+              alt="Samantha Sench"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold">Samantha Sench</h3>
+            <p class="text-gray-500">Student at University</p>
+          </div>
+        </div>
+
+        <!-- Konten Testimonial -->
+        <p class="text-gray-600 italic">
+          “ Hi, it’s Samantha. After using it made me a lot of benefits,
+          starting with convenience of setting a deadline of tasks and schedule
+          after that the app is very simple using. “
+        </p>
+
+        <!-- Panah Navigasi -->
+        <div
+          class="flex items-center justify-center lg:justify-start space-x-4 mt-4"
+        >
+          <button class="text-blue-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <button class="text-blue-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    
+      <!-- Footer Section -->
+      <footer class="p-6 bg-white">
+        <div class="max-w-screen-lg mx-auto">
+          <!-- Logo and Description -->
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="mb-8 md:mb-0">
+              <div class="flex items-center mb-2">
+                <div class="w-10 h-8 flex items-center justify-center">
+                  <img src="./src/image/Logo 1.png" alt="Remind Me Logo" class="h-10 w-auto">
+                </div>
+              <span class="text-xl font-bold text-gray-700 ml-2">Remind<span class= "text-blue-500">me</span></span>
+            </div>
+            <p class="text-gray-600 text-sm">
+              Task deadlines and scheduling applications with various benefits
+              and advantages
+            </p>
+          </div>
+
+          <!-- Sitemaps and Advantages on mobile -->
+      <div class="grid grid-cols-2 gap-8 md:hidden">
+        <!-- Sitemaps Mobile -->
+        <div>
+          <h3 class="font-semibold mb-4">Sitemaps</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center space-x-3">
+              <div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+              <a href="#" class="text-gray-600">Home</a>
+            </li>
+            <li class="flex items-center space-x-3">
+              <div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+              <a href="#" class="text-gray-600">Features</a>
+            </li>
+            <li class="flex items-center space-x-3">
+              <div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+              <a href="#" class="text-gray-600">About Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Advantages Mobile -->
+        <div>
+          <h3 class="font-semibold mb-4">Advantages</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center space-x-3">
+              <div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+              <a href="#" class="text-gray-600">Set Task Better</a>
+            </li>
+            <li class="flex items-center space-x-3">
+              <div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+              <a href="#" class="text-gray-600">Easy Manage</a>
+            </li>
+            <li class="flex items-center space-x-3">
+              <div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+              <a href="#" class="text-gray-600">Get Notification</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Sitemaps Desktop -->
+      <div class="hidden md:block">
+        <h3 class="font-bold mb-4">Sitemaps</h3>
+        <ul class="space-y-2">
+          <li class="flex items-center space-x-2">
+            <div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+            <a href="#" class="text-gray-600 hover:text-blue-600">Home</a>
+          </li>
+          <li class="flex items-center space-x-2">
+            <div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+            <a href="#" class="text-gray-600 hover:text-blue-600">Features</a>
+          </li>
+          <li class="flex items-center space-x-2">
+            <div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+            <a href="#" class="text-gray-600 hover:text-blue-600">About Us</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Advantages Desktop -->
+      <div class="hidden md:block">
+        <h3 class="font-bold mb-4">Advantages</h3>
+        <ul class="space-y-2">
+          <li class="flex items-center space-x-2">
+            <div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+            <a href="#" class="text-gray-600 hover:text-blue-600">Set Task Better</a>
+          </li>
+          <li class="flex items-center space-x-2">
+            <div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+            <a href="#" class="text-gray-600 hover:text-blue-600">Easy Manage</a>
+          </li>
+          <li class="flex items-center space-x-2">
+            <div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+            <a href="#" class="text-gray-600 hover:text-blue-600">Get Notification</a>
+          </li>
+        </ul>
+      </div>
+
+          <!-- Social Media Links -->
+          <div class="text-left">
+            <h3 class="font-semibold mb-4">Follow Us</h3>
+            <div class="flex space-x-4 justify-start">
+              <a href="#" class="text-blue-500 hover:text-blue-700"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-blue-500 hover:text-blue-700"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-blue-500 hover:text-blue-700"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </body>
+  </body>
+</html>
